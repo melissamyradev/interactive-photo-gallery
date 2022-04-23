@@ -1,0 +1,176 @@
+// =============================================
+//                Partials imports
+// =============================================
+@import 'normalize',
+        'variables',
+        'mixins',
+        'plugin-styles';
+
+/* =============================================
+//                Main styles
+// ===========================================*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: $sans;
+}
+
+h1 {
+  margin: 40px 0 30px;
+  font-size: 1.7rem;
+  font-style: italic;
+  transition: transform .5s cubic-bezier(1,-0.47,.13,1.52), text-decoration ease;
+  &:hover {
+    transform: rotate(-3deg) skewX(-5deg) scale(1.1);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  @include mq(min,$med) {
+    font-size: 2rem;
+  }
+  @include mq(min,$lrg) {
+    margin: 40px 0;
+    font-size: 2.2rem;
+  }
+}
+
+//search box
+input {
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 5px;
+  background: darken($search, 5);
+  height: 30px;
+  width: 80%;
+  max-width: 250px;
+  padding-left: 10px;
+  transition: background .2s, border .2s;
+  &::placeholder {
+    color: darken($search, 35);
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  &:focus {
+    outline: none;
+    border: 1.8px solid lighten($accent,10);
+    background: #fff;
+  }
+  @include mq(min,$lrg) {
+    height: 40px;
+    font-size: 16px;
+    max-width: 400px;
+    margin-bottom: 35px;
+  }
+}
+
+.container {
+  background: $background;
+  min-height: calc(100vh - 94.34px);
+}
+
+//main container for images
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  @include mq(min,$med) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  @include mq(min,$lrg) {
+    padding: 40px 0;
+  }
+}
+
+//=======================================================
+// // create x amount image class selectors & image names
+// @for $i from 1 through 12 {
+//   .image-#{$i} {
+//     background: url('../images/#{$i}.jpg');
+//   }
+// }
+//=======================================================
+
+//adjust each image size
+.gallery {
+  & img {
+  width: 100%;
+  max-width: 300px;
+  transition: all .1s ease-in-out;
+    &:hover{
+      box-shadow: 0 3px 10px 3px darken($background,10);
+      transform: scale(1.05);
+      border: 3px solid #fff;
+    }
+    @include mq(max,$med) {
+      //image gutters
+      margin-bottom: 10px;
+    }
+    @include mq(min,$med) {
+      height: 200px;
+      width: 200px;
+      margin: 10px;
+    }
+    @include mq(min,$lrg) {
+      height: 190px;
+      width: 190px;
+      margin: 30px;
+    }
+  }
+}
+
+hr {
+  border: 1px solid darken($background, 10);
+  width: 90%;
+  margin: 0 auto 20px;
+  @include mq(min,$lrg) {
+    display: none;
+  }
+}
+
+footer {
+  background: $background;
+  padding-bottom: 40px;
+  //logo svgs
+  & img {
+    width: 25px;
+    opacity: .5;
+    margin: 0 2px;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  //copyright
+  & span {
+    display: block;
+    font-style: italic;
+    font-size: 12px;
+    color: darken($background, 30);
+    @include mq(min,$med) {
+      font-size: 14px;
+    }
+  }
+  @include mq(min,$lrg) {
+    background: #fff;
+    margin-top: 80px;
+  }
+}
+
+// ================ Not Found JS Text ================
+
+.notfound {
+  color: darken($background,30);
+  font-style: italic;
+  font-size: 1.2rem;
+  @include mq(min,$med) {
+    font-size: 1.5rem;
+  }
+}

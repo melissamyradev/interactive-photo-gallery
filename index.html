@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photogram | Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="js/lightGallery-master/css/lightgallery.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Photogram</h1>
+    <input type="text" placeholder="search..." id="search">
+
+    <div class="container">
+      <main id="lightgallery">
+        <a href="images/1.jpg" class="gallery" data-sub-html="<h3>Hay Bales  - </h3><p>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</p>">
+          <img src="images/thumbnails/01.jpg" alt="" title="Hay Bales">
+        </a><!-- ==== image-1 end =====-->
+        <a href="images/2.jpg" class="gallery" data-sub-html="<h3>Lake  - </h3><p>The lake was so calm today. We had a great view of the snow on the mountains from here.</p>">
+          <img src="images/thumbnails/02.jpg" alt="" title="Lake">
+        </a><!-- ===== image-2 end ===== -->
+        <a href="images/3.jpg" class="gallery" data-sub-html="<h3>Canyon  - </h3><p>I hiked to the top of the mountain and got this picture of the canyon and trees below.</p>">
+          <img src="images/thumbnails/03.jpg" alt="" title="Canyon">
+        </a><!-- ===== image-3 end ===== -->
+        <a href="images/4.jpg" class="gallery" data-sub-html="<h3>Iceberg  - </h3><p>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</p>">
+          <img src="images/thumbnails/04.jpg" alt="" title="Iceberg">
+        </a><!-- ===== image-4 end ===== -->
+        <a href="images/5.jpg" class="gallery" data-sub-html="<h3>Desert  - </h3><p>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</p>">
+          <img src="images/thumbnails/05.jpg" alt="" title="Desert">
+        </a><!-- ===== image-5 end ===== -->
+        <a href="images/6.jpg" class="gallery" data-sub-html="<h3>Fall  - </h3><p>Fall is coming, I love when the leaves on the trees start to change color.</p>">
+          <img src="images/thumbnails/06.jpg" alt="" title="Fall">
+        </a><!-- ===== image-6 end ===== -->
+        <a href="images/7.jpg" class="gallery" data-sub-html="<h3>Plantation  - </h3><p>I drove past this plantation yesterday, everything is so green!</p>">
+          <img src="images/thumbnails/07.jpg" alt="" title="Plantation">
+        </a><!-- ===== image-7 end ===== -->
+        <a href="images/8.jpg" class="gallery" data-sub-html="<h3>Dunes  - </h3><p>My summer vacation to the Oregon Coast. I love the sandy dunes!</p>">
+          <img src="images/thumbnails/08.jpg" alt="" title="Dunes">
+        </a><!-- ===== image-8 end ===== -->
+        <a href="images/9.jpg" class="gallery" data-sub-html="<h3>Countryside Lane  - </h3><p>We enjoyed a quiet stroll down this countryside lane.</p>">
+          <img src="images/thumbnails/09.jpg" alt="" title="Countryside Lane">
+        </a><!-- ===== image-9 end ===== -->
+        <a href="images/10.jpg" class="gallery" data-sub-html="<h3>Sunset  - </h3><p>Sunset at the coast! The sky turned a lovely shade of orange.</p>">
+          <img src="images/thumbnails/10.jpg" alt="" title="Sunset">
+        </a><!-- ===== image-10 end ===== -->
+        <a href="images/11.jpg" class="gallery" data-sub-html="<h3>Cave  - </h3><p>I did a tour of a cave today and the view of the landscape below was breathtaking.</p>">
+          <img src="images/thumbnails/11.jpg" alt="" title="Cave">
+        </a><!-- ===== image-11 end ===== -->
+        <a href="images/12.jpg" class="gallery" data-sub-html="<h3>Bluebells  - </h3><p>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</p>">
+          <img src="images/thumbnails/12.jpg" alt="" title="Bluebells">
+        </a><!-- ===== image-12 end ===== -->
+
+      </main>
+    </div><!-- == container end == -->
+    <footer>
+      <hr>
+      <a href="https://github.com/melissamyradev" target="_blank"><img src="images/github.svg" alt=""></a>
+      <a href="https://codepen.io/melissamyra" target="_blank"><img src="images/codepen.svg" alt=""></a>
+      <span>&copy; <a href="https://melissamyra.space" target="_blank">Melissa Myra</a> | 2020</span>
+    </footer>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/lightGallery-master/js/lightgallery.min.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+    //call plugin
+      $(document).ready(function() {
+          $("#lightgallery").lightGallery();
+      });
+    </script>
+  </body>
+</html>

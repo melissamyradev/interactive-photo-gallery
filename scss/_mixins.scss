@@ -1,0 +1,12 @@
+//=============Media Queries==========
+
+@mixin mq($maxmin,$break) {
+  @media (#{$maxmin}-width: $break) {
+    @content;
+  }
+}
+
+//display
+@mixin no-dsp {
+  display: none;
+}
